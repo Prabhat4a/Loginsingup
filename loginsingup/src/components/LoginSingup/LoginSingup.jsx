@@ -21,7 +21,6 @@ const LoginSingup = () => {
   const [registerEmailError, setRegisterEmailError] = useState("");
   const [registerPasswordError, setRegisterPasswordError] = useState("");
   const [registerUsernameError, setRegisterUsernameError] = useState("");
-  const [termsError, setTermsError] = useState("");
   const [blinkError, setBlinkError] = useState(false);
 
   // Password visibility states
@@ -87,7 +86,6 @@ const LoginSingup = () => {
     setRegisterEmailError("");
     setRegisterPasswordError("");
     setRegisterUsernameError("");
-    setTermsError("");
 
     if (!registerEmail.trim()) {
       setRegisterEmailError("Please enter your email");
@@ -112,7 +110,6 @@ const LoginSingup = () => {
     }
 
     if (!termsCheckbox) {
-      setTermsError("You must agree to the terms and conditions");
       setBlinkError(true);
       setTimeout(() => {
         setBlinkError(false);
@@ -190,7 +187,7 @@ const LoginSingup = () => {
                 />
                 <i
                   id="toggleLoginPassword"
-                  className={`bx ${showLoginPassword ? "bx-show" : "bx-hide"}`}
+                  className={`bx toggle-password ${showLoginPassword ? "bx-show" : "bx-hide"}`}
                   onClick={() => setShowLoginPassword(!showLoginPassword)}
                   style={{ cursor: "pointer" }}
                 ></i>
@@ -282,9 +279,7 @@ const LoginSingup = () => {
                 />
                 <i
                   id="toggleRegisterPassword"
-                  className={`bx ${
-                    showRegisterPassword ? "bx-show" : "bx-hide"
-                  }`}
+                  className={`bx toggle-password ${showRegisterPassword ? "bx-show" : "bx-hide"}`}
                   onClick={() => setShowRegisterPassword(!showRegisterPassword)}
                   style={{ cursor: "pointer" }}
                 ></i>
@@ -326,17 +321,11 @@ const LoginSingup = () => {
                   checked={termsCheckbox}
                   onChange={(e) => {
                     setTermsCheckbox(e.target.checked);
-                    setTermsError("");
                     setBlinkError(false);
                   }}
                 />{" "}
                 I agree with terms and conditions
               </label>
-              {termsError && (
-                <span id="termsError" className="error-message show">
-                  {termsError}
-                </span>
-              )}
             </div>
 
             <div className="Register-button">
