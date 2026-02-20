@@ -1,0 +1,370 @@
+/* ==========================================
+   AUTH PAGE MAIN SECTION (LOGIN + REGISTER)
+   Background video + overlay layout
+   ========================================== */
+.auth-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ==========================================
+   BACKGROUND VIDEO (FULLSCREEN)
+   ========================================== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* ==========================================
+   VERIFICATION BACKGROUND VIDEO
+   ========================================== */
+#bg-video-verify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* ==========================================
+   DARK OVERLAY (GLASS EFFECT SUPPORT)
+   ========================================== */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* ==========================================
+   LOGO SECTION (TOP CENTER)
+   ========================================== */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  margin-top: 5px;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   LOGIN & REGISTER BOX (GLASS CARD)
+   ========================================== */
+.login-box {
+  position: relative;
+  width: 420px;
+  margin: 140px auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   FORM HEADINGS
+   ========================================== */
+.box-head h1,
+.box-head-2 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   INPUT BOX WRAPPER
+   ========================================== */
+.input-box {
+  margin-bottom: 18px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.input-wrapper i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.input-wrapper input::placeholder {
+  color: #ddd;
+}
+
+/* ==========================================
+   INPUT WITH VERIFY BUTTON (EMAIL/PHONE)
+   ========================================== */
+.input-wrapper-with-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.verify-small-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.verify-small-btn:hover {
+  background: #4338ca;
+}
+
+/* ==========================================
+   PHONE INPUT COUNTRY CODE
+   ========================================== */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.country-code {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* ==========================================
+   ERROR MESSAGE STYLE
+   ========================================== */
+.error-message {
+  font-size: 12px;
+  color: #ff6b6b;
+  margin-top: 5px;
+  display: none;
+}
+
+/* ==========================================
+   REMEMBER & FORGOT SECTION
+   ========================================== */
+.remember-forgot,
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.remember-forgot a,
+.remember a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover,
+.remember a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   PRIMARY LOGIN BUTTON
+   ========================================== */
+.login-button button,
+.Register-button button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-button button:hover,
+.Register-button button:hover {
+  background: #4338ca;
+}
+
+/* ==========================================
+   DIVIDER (OR LINE)
+   ========================================== */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  background: transparent;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* ==========================================
+   GOOGLE LOGIN / REGISTER BUTTON
+   ========================================== */
+.google-login,
+.google-register-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================
+   ACCOUNT SWITCH LINKS (LOGIN <-> REGISTER)
+   ========================================== */
+.account,
+.have-account {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.account a,
+.have-account a {
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.account a:hover,
+.have-account a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   VERIFICATION SECTION (FULL PAGE)
+   ========================================== */
+.verification-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ==========================================
+   VERIFICATION BOX (GLASS UI)
+   ========================================== */
+.verification-box {
+  width: 420px;
+  margin: 140px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  color: #ffffff;
+  text-align: center;
+}
+
+.box-head-verify h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.verify-button button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.verify-button button:hover {
+  background: #16a34a;
+}
+
+/* ==========================================
+   BACK TO LOGIN LINK (VERIFICATION PAGE)
+   ========================================== */
+.back-to-login {
+  margin-top: 15px;
+}
+
+.back-to-login-link {
+  background: none;
+  border: none;
+  color: #a5b4fc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ==========================================
+   FOOTER (AUTH PAGES)
+   ========================================== */
+.site-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.site-footer a {
+  margin: 0 10px;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}

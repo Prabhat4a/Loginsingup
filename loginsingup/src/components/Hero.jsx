@@ -101,10 +101,10 @@ function Hero() {
 
         <div className="hero-fade"></div>
       </div>
-
-      <div className="scroll-indicator">
-        <i className="bx bx-chevron-down"></i>
-      </div>
+      {/* Hero Images Grid 
+        <div className="scroll-indicator">
+          <i className="bx bx-chevron-down"></i>
+        </div>*/}
     </section>
   );
 }

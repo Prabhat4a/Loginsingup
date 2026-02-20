@@ -3,7 +3,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <img src="/logo.png" alt="STUVO" className="logo-icon" />
+        <img
+          src="/android-chrome-512x512.png"
+          alt="STUVO"
+          className="logo-icon"
+        />
         <span className="logo-text">STUVO5</span>
       </div>
 
